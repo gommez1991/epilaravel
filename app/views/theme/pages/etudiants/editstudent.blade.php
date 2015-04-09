@@ -2,19 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Data Tables</title>
+        <title>AdminLTE | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- DATA TABLES -->
-        <link href="css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="../css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
-
+        <link href="../css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -25,7 +23,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -54,7 +52,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <img src="../img/avatar3.png" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -66,7 +64,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -78,7 +76,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -90,7 +88,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="../img/avatar2.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -102,7 +100,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="../img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -237,7 +235,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -278,7 +276,7 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -299,7 +297,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="index.html">
+                            <a href="../index.html">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
@@ -345,14 +343,14 @@
                                 <li><a href="../forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>                                
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-table"></i> <span>Tables</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li class="active"><a href="data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
@@ -367,19 +365,19 @@
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-folder"></i> <span>Examples</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="../examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="../examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="../examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="../examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="../examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>                                
-                                <li><a href="../examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>                                
+                                <li class="active"><a href="blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -392,61 +390,339 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Data Tables
-                        <small>advanced tables</small>
+                        Modification d'etudiant {{$user->nom}}  {{$user->prenom}}
+                        
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">Tables</a></li>
-                        <li class="active">Data tables</li>
+                        <li><a href="#">Examples</a></li>
+                        <li class="active">Blank page</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box">
+                 <div class="user-header bg-light-blue" style="
+    height: 175px;    padding: 10px;    background: #3c8dbc;    text-align: center;
+">
+                     <img src="../{{$user->url_avatar}}" class="img-circle" alt="User Image" style="
+    z-index: 5;    height: 90px;    width: 90px;    border: 8px solid;    border-color: transparent;    border-color: rgba(255, 255, 255, 0.2);
+">
+                                    <p style="
+    z-index: 5;    color: #f9f9f9;    color: rgba(255, 255, 255, 0.8);    font-size: 17px;    text-shadow: 2px 2px 3px #333333;    margin-top: 10px;
+">
+                                        {{$user->nom}}  {{$user->prenom}}<br>
+                                        <small>Etudiant</small>
+                                    </p>
+                                </div>
+                                <div class="box box-danger">
                                 <div class="box-header">
-                                    <h3 class="box-title">Data Table With Full Features</h3>                                    
+                                    <h3 class="box-title">Informations Generals</h3>
                                 </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($users as $key => $value)
-                                            <tr>
-                                                <td><div class="user-panel" style="padding:0px;"><div class="pull-left image"><img src="{{ $value->url_avatar }}" class="img-circle" alt="User Image"></div><div class="pull-left info"><p>{{ $value->nom }} {{ $value->prenom }}</p></div></div></td>
-                                                <td>{{ $value->numero_inscrit }}</td>
-                                                <td>{{ $value->email }}</td>
-                                                <td>{{ $value->telephone }}</td>
-                                               
-                                                <td><a href="{{ URL::to('viewstudent/' . $value->id) }}"><button type="button" class="btn btn-success btn-flat  fa  fa-eye"></button></a><a href="{{ URL::to('deletestudent/' . $value->id) }}"><button type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a><a href="{{ URL::to('editstudent/' . $value->id) }}"><button type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a></td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
+                                <div class="box-body">
+                                    <form action="" method="post">
+                                        <div class="form-group col-xs-6">
+                                            <label>Numero D'inscription</label>
+                                            <input type="text" class="form-control" placeholder="Numero D'inscription" name="numero_inscrit" value="{{$user->numero_inscrit}}"  required>
+                                        </div>
+                                        <!-- text input -->
+                                        <div class="form-group col-xs-6">
+                                            <label>Pseudo</label>
+                                            <input type="text" class="form-control" name="pseudo" value="{{$user->pseudo}}" >
+                                        </div>
+                                        <div class="form-group col-xs-6">
+                                            <label>Nouveau mot de passe</label>
+                                            <input type="password" class="form-control"  placeholder="Mot de passe">
+                                        </div>
+                                        <div class="form-group col-xs-6">
+                                            <label>Confirmation de mot de passe</label>
+                                            <input type="password" class="form-control"  placeholder="Mot de passe">
+                                        </div>
+                                        <div class="form-group col-xs-6">
+                                            <label>Nom</label>
+                                            <input type="text" name="nom" class="form-control"  value="{{$user->nom}}">
+                                        </div>
+                                        <div class="form-group col-xs-6">
+                                            <label>Prenom</label>
+                                            <input type="text" name="prenom" class="form-control"  value="{{$user->nom}}">
+                                        </div>
+                                        <div class="form-group col-xs-6">
+                                            <label>Email</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">@</span>
+                                                    <input type="email" name="email" class="form-control"  value="{{$user->email}}">
+                                                </div>
+                                        </div>
+                                        <div class="form-group col-xs-6">
+                                            <label>Telephone</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-phone"></i>
+                                                </div>
+                                                <input type="text" name="telephone" value="{{$user->telephone}}" class="form-control"/>
+                                             </div><!-- /.input group -->
+                                        </div>
+                                        <div class="form-group col-xs-6">
+                                        <label>Sexe</label> 
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="sexe" id="sexe" value="sexe" checked>
+                                                    ♀ Homme 
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="sexe" id="sexe" value="sexe">
+                                                    ♂ Femme
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- textarea -->
+                                        <div class="form-group col-xs-6">
+                                            <label>Adresse</label>
+                                            <textarea class="form-control" name="adresse" rows="3" placeholder="Enter ...">{{$user->adresse}}</textarea>
+                                        </div>
+                                        <div class="form-group col-xs-12">
+                                            <label>Pays </label>
+                                            <select class="form-control" name="nationalite">
+                                                <option value="France" >France </option>
+<option value="Afghanistan">Afghanistan </option>
+<option value="Afrique_Centrale">Afrique_Centrale </option>
+<option value="Afrique_du_sud">Afrique_du_Sud </option> 
+<option value="Albanie">Albanie </option>
+<option value="Algerie">Algerie </option>
+<option value="Allemagne">Allemagne </option>
+<option value="Andorre">Andorre </option>
+<option value="Angola">Angola </option>
+<option value="Anguilla">Anguilla </option>
+<option value="Arabie_Saoudite">Arabie_Saoudite </option>
+<option value="Argentine">Argentine </option>
+<option value="Armenie">Armenie </option> 
+<option value="Australie">Australie </option>
+<option value="Autriche">Autriche </option>
+<option value="Azerbaidjan">Azerbaidjan </option>
+<option value="Bahamas">Bahamas </option>
+<option value="Bangladesh">Bangladesh </option>
+<option value="Barbade">Barbade </option>
+<option value="Bahrein">Bahrein </option>
+<option value="Belgique">Belgique </option>
+<option value="Belize">Belize </option>
+<option value="Benin">Benin </option>
+<option value="Bermudes">Bermudes </option>
+<option value="Bielorussie">Bielorussie </option>
+<option value="Bolivie">Bolivie </option>
+<option value="Botswana">Botswana </option>
+<option value="Bhoutan">Bhoutan </option>
+<option value="Boznie_Herzegovine">Boznie_Herzegovine </option>
+<option value="Bresil">Bresil </option>
+<option value="Brunei">Brunei </option>
+<option value="Bulgarie">Bulgarie </option>
+<option value="Burkina_Faso">Burkina_Faso </option>
+<option value="Burundi">Burundi </option>
+<option value="Caiman">Caiman </option>
+<option value="Cambodge">Cambodge </option>
+<option value="Cameroun">Cameroun </option>
+<option value="Canada">Canada </option>
+<option value="Canaries">Canaries </option>
+<option value="Cap_vert">Cap_Vert </option>
+<option value="Chili">Chili </option>
+<option value="Chine">Chine </option> 
+<option value="Chypre">Chypre </option> 
+<option value="Colombie">Colombie </option>
+<option value="Comores">Colombie </option>
+<option value="Congo">Congo </option>
+<option value="Congo_democratique">Congo_democratique </option>
+<option value="Cook">Cook </option>
+<option value="Coree_du_Nord">Coree_du_Nord </option>
+<option value="Coree_du_Sud">Coree_du_Sud </option>
+<option value="Costa_Rica">Costa_Rica </option>
+<option value="Cote_d_Ivoire">Côte_d_Ivoire </option>
+<option value="Croatie">Croatie </option>
+<option value="Cuba">Cuba </option>
+<option value="Danemark">Danemark </option>
+<option value="Djibouti">Djibouti </option>
+<option value="Dominique">Dominique </option>
+<option value="Egypte">Egypte </option> 
+<option value="Emirats_Arabes_Unis">Emirats_Arabes_Unis </option>
+<option value="Equateur">Equateur </option>
+<option value="Erythree">Erythree </option>
+<option value="Espagne">Espagne </option>
+<option value="Estonie">Estonie </option>
+<option value="Etats_Unis">Etats_Unis </option>
+<option value="Ethiopie">Ethiopie </option>
+<option value="Falkland">Falkland </option>
+<option value="Feroe">Feroe </option>
+<option value="Fidji">Fidji </option>
+<option value="Finlande">Finlande </option>
+<option value="France">France </option>
+<option value="Gabon">Gabon </option>
+<option value="Gambie">Gambie </option>
+<option value="Georgie">Georgie </option>
+<option value="Ghana">Ghana </option>
+<option value="Gibraltar">Gibraltar </option>
+<option value="Grece">Grece </option>
+<option value="Grenade">Grenade </option>
+<option value="Groenland">Groenland </option>
+<option value="Guadeloupe">Guadeloupe </option>
+<option value="Guam">Guam </option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guernesey">Guernesey </option>
+<option value="Guinee">Guinee </option>
+<option value="Guinee_Bissau">Guinee_Bissau </option>
+<option value="Guinee equatoriale">Guinee_Equatoriale </option>
+<option value="Guyana">Guyana </option>
+<option value="Guyane_Francaise ">Guyane_Francaise </option>
+<option value="Haiti">Haiti </option>
+<option value="Hawaii">Hawaii </option> 
+<option value="Honduras">Honduras </option>
+<option value="Hong_Kong">Hong_Kong </option>
+<option value="Hongrie">Hongrie </option>
+<option value="Inde">Inde </option>
+<option value="Indonesie">Indonesie </option>
+<option value="Iran">Iran </option>
+<option value="Iraq">Iraq </option>
+<option value="Irlande">Irlande </option>
+<option value="Islande">Islande </option>
+<option value="Israel">Israel </option>
+<option value="Italie">italie </option>
+<option value="Jamaique">Jamaique </option>
+<option value="Jan Mayen">Jan Mayen </option>
+<option value="Japon">Japon </option>
+<option value="Jersey">Jersey </option>
+<option value="Jordanie">Jordanie </option>
+<option value="Kazakhstan">Kazakhstan </option>
+<option value="Kenya">Kenya </option>
+<option value="Kirghizstan">Kirghizistan </option>
+<option value="Kiribati">Kiribati </option>
+<option value="Koweit">Koweit </option>
+<option value="Laos">Laos </option>
+<option value="Lesotho">Lesotho </option>
+<option value="Lettonie">Lettonie </option>
+<option value="Liban">Liban </option>
+<option value="Liberia">Liberia </option>
+<option value="Liechtenstein">Liechtenstein </option>
+<option value="Lituanie">Lituanie </option> 
+<option value="Luxembourg">Luxembourg </option>
+<option value="Lybie">Lybie </option>
+<option value="Macao">Macao </option>
+<option value="Macedoine">Macedoine </option>
+<option value="Madagascar">Madagascar </option>
+<option value="Madère">Madère </option>
+<option value="Malaisie">Malaisie </option>
+<option value="Malawi">Malawi </option>
+<option value="Maldives">Maldives </option>
+<option value="Mali">Mali </option>
+<option value="Malte">Malte </option>
+<option value="Man">Man </option>
+<option value="Mariannes du Nord">Mariannes du Nord </option>
+<option value="Maroc">Maroc </option>
+<option value="Marshall">Marshall </option>
+<option value="Martinique">Martinique </option>
+<option value="Maurice">Maurice </option>
+<option value="Mauritanie">Mauritanie </option>
+<option value="Mayotte">Mayotte </option>
+<option value="Mexique">Mexique </option>
+<option value="Micronesie">Micronesie </option>
+<option value="Midway">Midway </option>
+<option value="Moldavie">Moldavie </option>
+<option value="Monaco">Monaco </option>
+<option value="Mongolie">Mongolie </option>
+<option value="Montserrat">Montserrat </option>
+<option value="Mozambique">Mozambique </option>
+<option value="Namibie">Namibie </option>
+<option value="Nauru">Nauru </option>
+<option value="Nepal">Nepal </option>
+<option value="Nicaragua">Nicaragua </option>
+<option value="Niger">Niger </option>
+<option value="Nigeria">Nigeria </option>
+<option value="Niue">Niue </option>
+<option value="Norfolk">Norfolk </option>
+<option value="Norvege">Norvege </option>
+<option value="Nouvelle_Caledonie">Nouvelle_Caledonie </option>
+<option value="Nouvelle_Zelande">Nouvelle_Zelande </option>
+<option value="Oman">Oman </option>
+<option value="Ouganda">Ouganda </option>
+<option value="Ouzbekistan">Ouzbekistan </option>
+<option value="Pakistan">Pakistan </option>
+<option value="Palau">Palau </option>
+<option value="Palestine">Palestine </option>
+<option value="Panama">Panama </option>
+<option value="Papouasie_Nouvelle_Guinee">Papouasie_Nouvelle_Guinee </option>
+<option value="Paraguay">Paraguay </option>
+<option value="Pays_Bas">Pays_Bas </option>
+<option value="Perou">Perou </option>
+<option value="Philippines">Philippines </option> 
+<option value="Pologne">Pologne </option>
+<option value="Polynesie">Polynesie </option>
+<option value="Porto_Rico">Porto_Rico </option>
+<option value="Portugal">Portugal </option>
+<option value="Qatar">Qatar </option>
+<option value="Republique_Dominicaine">Republique_Dominicaine </option>
+<option value="Republique_Tcheque">Republique_Tcheque </option>
+<option value="Reunion">Reunion </option>
+<option value="Roumanie">Roumanie </option>
+<option value="Royaume_Uni">Royaume_Uni </option>
+<option value="Russie">Russie </option>
+<option value="Rwanda">Rwanda </option>
+<option value="Sahara Occidental">Sahara Occidental </option>
+<option value="Sainte_Lucie">Sainte_Lucie </option>
+<option value="Saint_Marin">Saint_Marin </option>
+<option value="Salomon">Salomon </option>
+<option value="Salvador">Salvador </option>
+<option value="Samoa_Occidentales">Samoa_Occidentales</option>
+<option value="Samoa_Americaine">Samoa_Americaine </option>
+<option value="Sao_Tome_et_Principe">Sao_Tome_et_Principe </option> 
+<option value="Senegal">Senegal </option> 
+<option value="Seychelles">Seychelles </option>
+<option value="Sierra Leone">Sierra Leone </option>
+<option value="Singapour">Singapour </option>
+<option value="Slovaquie">Slovaquie </option>
+<option value="Slovenie">Slovenie</option>
+<option value="Somalie">Somalie </option>
+<option value="Soudan">Soudan </option> 
+<option value="Sri_Lanka">Sri_Lanka </option> 
+<option value="Suede">Suede </option>
+<option value="Suisse">Suisse </option>
+<option value="Surinam">Surinam </option>
+<option value="Swaziland">Swaziland </option>
+<option value="Syrie">Syrie </option>
+<option value="Tadjikistan">Tadjikistan </option>
+<option value="Taiwan">Taiwan </option>
+<option value="Tonga">Tonga </option>
+<option value="Tanzanie">Tanzanie </option>
+<option value="Tchad">Tchad </option>
+<option value="Thailande">Thailande </option>
+<option value="Tibet">Tibet </option>
+<option value="Timor_Oriental">Timor_Oriental </option>
+<option value="Togo">Togo </option> 
+<option value="Trinite_et_Tobago">Trinite_et_Tobago </option>
+<option value="Tristan da cunha">Tristan de cuncha </option>
+<option value="Tunisie" selected="selected">Tunisie </option>
+<option value="Turkmenistan">Turmenistan </option> 
+<option value="Turquie">Turquie </option>
+<option value="Ukraine">Ukraine </option>
+<option value="Uruguay">Uruguay </option>
+<option value="Vanuatu">Vanuatu </option>
+<option value="Vatican">Vatican </option>
+<option value="Venezuela">Venezuela </option>
+<option value="Vierges_Americaines">Vierges_Americaines </option>
+<option value="Vierges_Britanniques">Vierges_Britanniques </option>
+<option value="Vietnam">Vietnam </option>
+<option value="Wake">Wake </option>
+<option value="Wallis et Futuma">Wallis et Futuma </option>
+<option value="Yemen">Yemen </option>
+<option value="Yougoslavie">Yougoslavie </option>
+<option value="Zambie">Zambie </option>
+<option value="Zimbabwe">Zimbabwe </option>
+                                            </select>
+                                        </div>
+                                    <div class="box-footer">
+                                        <button type="submit" class="btn btn-primary">Modifier</button>
+                                       <a class="btn btn-danger" href="../liststudents"> Annuler</a>
+                                    </div>
+                                    </form>
                                 </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div>
-                    </div>
+                            </div>
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
@@ -456,27 +732,9 @@
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- DATA TABES SCRIPT -->
-        <script src="js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/AdminLTE/app.js" type="text/javascript"></script>
-
-        <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
-            });
-        </script>
+        <script src="../js/AdminLTE/app.js" type="text/javascript"></script>
 
     </body>
 </html>
