@@ -10,9 +10,11 @@
         <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="../css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-        
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -22,7 +24,7 @@
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
-        <header class="header">
+       <header class="header">
             <a href="index.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Epi Sousse
@@ -51,7 +53,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         
                                        
@@ -66,10 +68,10 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="../Profile" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="./Profile" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="../logout" class="btn btn-default btn-flat">Déconnexion</a>
+                                        <a href="./logout" class="btn btn-default btn-flat">Déconnexion</a>
                                     </div>
                                 </li>
                             </ul>
@@ -98,19 +100,19 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="../dashboard">
+                            <a href="./dashboard">
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-users "></i>
                                 <span>Gestion des etudiants</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li ><a href="../addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="../liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
+                                <li ><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
                          <li class="treeview">
@@ -124,16 +126,16 @@
                                 <li><a href="../listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview ">
                             <a href="#">
                                 <i class="fa  fa-hospital-o"></i>
                                 <span>Gestion de l'ecole</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
+                                <li  ><a href="../adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
                                 <li><a href="../listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
-                                <li><a href="../addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
+                                <li ><a href="../addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
                                 <li><a href="../listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
                                 
                                 <li><a href="../addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
@@ -159,7 +161,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="../addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
-                                <li><a href="../listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
+                                <li ><a href="../listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
                             </ul>
                         </li>
                         
@@ -180,30 +182,93 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        {{$etudiant->nom}}  {{$etudiant->prenom}}
-                        
+                        Modification de matiére {{$matiere->nom_matiere}}
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i>Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Voire etudiant</li>
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="#">Examples</a></li>
+                        <li class="active">Blank page</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
                  <div class="user-header bg-light-blue" style="
-    height: 175px;    padding: 10px;    background: #3c8dbc;    text-align: center;
+        padding: 10px;    background: #3c8dbc;    text-align: center;
 ">
-                     <img src="../{{$etudiant->url_avatar}}" class="img-circle" alt="User Image" style="
-    z-index: 5;    height: 90px;    width: 90px;    border: 8px solid;    border-color: transparent;    border-color: rgba(255, 255, 255, 0.2);
-">
-                                    <p style="
+                     
+                                    <h1 style="
     z-index: 5;    color: #f9f9f9;    color: rgba(255, 255, 255, 0.8);    font-size: 17px;    text-shadow: 2px 2px 3px #333333;    margin-top: 10px;
 ">
-                                        {{$etudiant->nom}}  {{$etudiant->prenom}}<br>
-                                        <small>Etudiant</small>
-                                    </p>
+                                        {{$matiere->nom_matiere}}<br>
+                                    </h1>
+                                </div>
+                                <div class="box box-danger">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Informations Generals</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <form action="" method="post">
+                                            <!-- text input -->
+                                            <div class="form-group col-xs-6">
+                                                <label>Nom</label>
+                                                <input type="text" class="form-control" name="nom_matiere" value="{{$matiere->nom_matiere}}" >
+                                            </div>
+                                            <div class="form-group col-xs-6">
+                                                <label>coefficient</label>
+                                                <input type="number" class="form-control" name="coefficient" value="{{$matiere->coefficient}}" >
+                                            </div>
+                                             <div class="form-group col-xs-6">
+                                                <label>Volume horaire</label>
+                                                <input type="number"  class="form-control" name="volume_horaire" value="{{$matiere->volume_horaire}}" >
+                                            </div>
+                                            <div class="form-group col-xs-6">
+                                                <label>Type</label>
+                                                <select class="form-control" name="type">
+                                                @if($matiere->type==='cours')
+                                                    <option selected value="cours">Cours</option>
+                                                    <option value="tp">TP</option>
+                                                    <option value="td">TD</option>
+                                                @elseif($matiere->type=="tp")
+                                                    <option  value="cours">Cours</option>
+                                                    <option  selected value="tp">TP</option>
+                                                    <option value="td">TD</option>
+                                                @else
+                                                    <option  value="cours">Cours</option>
+                                                    <option value="tp">TP</option>
+                                                    <option  selected value="td">TD</option>
+                                                @endif
+                                                </select>
+                                                
+                                            </div>
+                                            <!-- textarea -->
+                                            <div class="form-group col-xs-12">
+                                                <label>Filirer</label>
+                                                <select class="form-control" name="filiere_id">
+                                                    <?php 
+                                                        $enseignant=DB::table('filieres')
+                                                            ->select('*')
+                                                            ->get();
+                                                            
+                                                    ?>
+                                                     @foreach($enseignant as $key => $value)
+                                                        @if($value->id==$matiere->filiere_id)
+                                                            <option selected value="{{$value->id}}" >{{$value->nom_filiere}} </option>
+                                                        @else
+                                                            <option  value="{{$value->id}}" >{{$value->nom_filiere}} </option>
+                                                        @endif
+                                                        
+                                                     @endforeach
+
+                                                 </select>
+                                            </div>
+                                            <div class="box-footer">
+                                            <button type="submit" class="btn btn-primary">Modifier</button>
+                                           <a class="btn btn-danger" href="../listmatiere"> Annuler</a>
+                                    </div>
+                                        </form>
+                                    </div><!-- /.box-body -->
+                                    
                                 </div>
 
                 </section><!-- /.content -->

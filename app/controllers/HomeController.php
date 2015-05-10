@@ -24,17 +24,20 @@ class HomeController extends BaseController {
     {
         $pseudo = Input::get('pseudo');
         $motDePass = Input::get('motDePass');
- 
+        $user=DB::table('utilisateur')
+             ->where('utilisateur.pseudo', $pseudo)
+            ->first();
+            //var_dump($user);
        	if (Auth::attempt(array('pseudo' => $pseudo, 'password' => $motDePass )))
         {
+            Session::flush();
+            Session::push('user', $user);
+            //var_dump(Session::get('user'));
            	return Redirect::intended('dashboard');
-        	echo "<script>alert('ok');</script>";
-            //return Redirect::route('ze');
-            
-       }
-       // return Redirect::back()
-           // ->withInput()
-           // ->withErrors('Le pseudo et la mot de passe que vous saisie sont invalide');
+        }
+        return Redirect::back()
+        ->withInput()
+        ->withErrors('Le pseudo et la mot de passe que vous saisie sont invalide');
     }
  
     public function getLogin()

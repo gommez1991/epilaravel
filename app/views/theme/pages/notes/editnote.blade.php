@@ -2,19 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Epi Sousse | Espace Etudiant</title>
+        <title>AdminLTE | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- DATA TABLES -->
-        <link href="css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
-
+        <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -24,7 +22,7 @@
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
-       <header class="header">
+        <header class="header">
             <a href="index.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Epi Sousse
@@ -48,7 +46,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>{{ Session::get('user')[0]->pseudo }} <i class="caret"></i></span>
+                                <span> <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -57,7 +55,7 @@
                                     <p>
                                         
                                        
-                                            {{ Session::get('user')[0]->nom }} {{ Session::get('user')[0]->prenom }}
+                                           
                                 
                                 
                                         
@@ -68,10 +66,10 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="./Profile" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="./../Profile" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="./logout" class="btn btn-default btn-flat">Déconnexion</a>
+                                        <a href="./../logout" class="btn btn-default btn-flat">Déconnexion</a>
                                     </div>
                                 </li>
                             </ul>
@@ -99,20 +97,20 @@
                     
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li>
-                            <a href="./dashboard">
+                        <li class="active">
+                            <a href="./../dashboard">
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-users "></i>
-                                <span>Gestion des etudiants</span>
+                                <i class="fa fa-users"></i>
+                                <span>Gestion d'etudiants</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li><a href="./../addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
+                                <li><a href="./../liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
                          <li class="treeview">
@@ -122,8 +120,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./addenseignant"><i class="fa fa-angle-double-right"></i> Ajouter Un Enseignant</a></li>
-                                <li><a href="./listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
+                                <li><a href="./../addenseignant"><i class="fa fa-angle-double-right"></i> Ajouter Un Enseignant</a></li>
+                                <li><a href="./../listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -133,13 +131,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
-                                <li><a href="./listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
-                                <li><a href="./addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
-                                <li><a href="./listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
+                                <li><a href="./../adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
+                                <li><a href="./../listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
+                                <li><a href="./../addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
+                                <li><a href="./../listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
                                 
-                                <li><a href="./addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
-                                <li><a href="./listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
+                                <li><a href="./../addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
+                                <li class="active"><a href="./../listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -149,8 +147,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./addmatiere"><i class="fa fa-angle-double-right"></i>Ajouter une matière</a></li>
-                                <li><a href="./listmatiere"><i class="fa fa-angle-double-right"></i>List des matières</a></li>
+                                <li><a href="./../addmatiere"><i class="fa fa-angle-double-right"></i>Ajouter une matière</a></li>
+                                <li><a href="./../listmatiere"><i class="fa fa-angle-double-right"></i>List des matières</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -160,13 +158,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
-                                <li><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
+                                <li><a href="./../addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
+                                <li><a href="./../listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
                             </ul>
                         </li>
                         
                         <li>
-                            <a href="./gestevents">
+                            <a href="../gestevents">
                                 <i class="fa fa-calendar"></i> <span>Gestion des événements</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
@@ -177,97 +175,67 @@
                 <!-- /.sidebar -->
             </aside>
 
-
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Liste des etudiants
-                        <small></small>
+                        Modification de note de {{$note[0]->nom_matiere}}
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Liste d'etudiants</li>
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="#">Examples</a></li>
+                        <li class="active">Blank page</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box">
-                                <div class="box-header">
-                                    <h3 class="box-title"></h3>                                    
-                                </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($users as $key => $value)
-                                            <tr>
-                                                <td><p>{{ $value->nom }} {{ $value->prenom }}</p></td>
-                                                <td>{{ $value->numero_inscrit }}</td>
-                                                <td>{{ $value->email }}</td>
-                                                <td>{{ $value->telephone }}</td>
-                                               
-                                                <td><a href="{{ URL::to('viewstudent/' . $value->id) }}"><button type="button" class="btn btn-success btn-flat  fa  fa-eye"></button></a> <a href="{{ URL::to('editstudent/' . $value->id) }}"><button type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a> <a href="{{ URL::to('deletestudent/' . $value->id) }}"><button type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a> </td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div>
-                    </div>
+                
+                                <div class="box box-danger">
+                                    <div class="box-header">
+                                        <h3 class="box-title">{{$note[0]->nom}} {{$note[0]->prenom}}</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <form action="" method="post">
+                                            <!-- text input -->
+                                            <input type="hidden" name="id_mat" value="{{$note[0]->id_matiere}}">
+                                            <input type="hidden" name="id_user" value="{{$note[0]->id}}">
+                                            <input type="hidden" name="id_matiere" value="{{$note[0]->id_matiere}}">
+
+                                            <div class="form-group col-md-4">
+                                                <label>Note de DS</label>
+                                                <input type="text" class="form-control" name="not_ds" value="{{$note[1]}}" >
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label>Note de TP</label>
+                                                <input type="text" class="form-control" name="not_tp" value="{{$note[2]}}" >
+                                            </div>
+                                            <!-- textarea -->
+                                            <div class="form-group col-md-4">
+                                                <label>Note examen</label>
+                                                <input type="text" class="form-control" name="not_exam" value="{{$note[3]}}" >
+                                            </div>
+                                            <div class="box-footer">
+                                            <button type="submit" class="btn btn-primary">Modifier</button>
+                                           <a class="btn btn-danger" href="../../listnote"> Annuler</a>
+                                    </div>
+                                        </form>
+                                    </div><!-- /.box-body -->
+                                    
+                                </div>
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
-        </div><!-- ./wrapper -->
+        </div><!-- ./../wrapper -->
 
 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- DATA TABES SCRIPT -->
-        <script src="js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/AdminLTE/app.js" type="text/javascript"></script>
-
-        <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
-            });
-        </script>
+        <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
 
     </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+     <head>
         <meta charset="UTF-8">
         <title>Epi Sousse | Espace Etudiant</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -10,9 +10,11 @@
         <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="../css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-        
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -22,7 +24,7 @@
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
-       <header class="header">
+        <header class="header">
             <a href="index.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Epi Sousse
@@ -51,7 +53,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         
                                        
@@ -102,7 +104,7 @@
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview ">
                             <a href="#">
                                 <i class="fa fa-users "></i>
                                 <span>Gestion des etudiants</span>
@@ -110,10 +112,10 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li ><a href="../addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="../liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li ><a href="../liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
-                         <li class="treeview">
+                         <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-suitcase"></i>
                                 <span>Gestion d'enseignants</span>
@@ -121,7 +123,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="../addenseignant"><i class="fa fa-angle-double-right"></i> Ajouter Un Enseignant</a></li>
-                                <li><a href="../listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
+                                <li class="active"><a href="../listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -179,29 +181,27 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Modification d'etudiant {{$user->nom}}  {{$user->prenom}}
+                        Modification d'enseignant {{$user->nom}}  {{$user->prenom}}
                         
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Modification etudiant</li>
+                        <li><a href="#">Gestion des enseignants</a></li>
+                        <li class="active">Modification d'enseignant</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
                  <div class="user-header bg-light-blue" style="
-    height: 175px;    padding: 10px;    background: #3c8dbc;    text-align: center;
+        padding: 10px;    background: #3c8dbc;    text-align: center;
 ">
-                     <img src="../{{$user->url_avatar}}" class="img-circle" alt="User Image" style="
-    z-index: 5;    height: 90px;    width: 90px;    border: 8px solid;    border-color: transparent;    border-color: rgba(255, 255, 255, 0.2);
-">
+                     
                                     <p style="
     z-index: 5;    color: #f9f9f9;    color: rgba(255, 255, 255, 0.8);    font-size: 17px;    text-shadow: 2px 2px 3px #333333;    margin-top: 10px;
 ">
                                         {{$user->nom}}  {{$user->prenom}}<br>
-                                        <small>Etudiant</small>
+                                        <small>Enseignant</small>
                                     </p>
                                 </div>
                                 <div class="box box-danger">
@@ -210,39 +210,36 @@
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
                                     <form action="" method="post">
-                                        <div class="form-group col-md-6">
-                                            <label>Numero D'inscription</label>
-                                            <input type="text" class="form-control" placeholder="Numero D'inscription" name="numero_inscrit" value="{{$user->numero_inscrit}}"  required>
-                                        </div>
+                                        
                                         <!-- text input -->
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Pseudo</label>
                                             <input type="text" class="form-control" name="pseudo" value="{{$user->pseudo}}" >
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Nouveau mot de passe</label>
                                             <input type="password" class="form-control"  placeholder="Mot de passe">
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Confirmation de mot de passe</label>
                                             <input type="password" class="form-control"  placeholder="Mot de passe">
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Nom</label>
                                             <input type="text" name="nom" class="form-control"  value="{{$user->nom}}">
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Prenom</label>
                                             <input type="text" name="prenom" class="form-control"  value="{{$user->nom}}">
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Email</label>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">@</span>
                                                     <input type="email" name="email" class="form-control"  value="{{$user->email}}">
                                                 </div>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Telephone</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">
@@ -251,7 +248,7 @@
                                                 <input type="text" name="telephone" value="{{$user->telephone}}" class="form-control"/>
                                              </div><!-- /.input group -->
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                         <label>Sexe</label> 
                                             <div class="radio">
                                                 <label>
@@ -266,12 +263,16 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <!-- textarea -->
-                                        <div class="form-group col-md-6">
-                                            <label>Adresse</label>
-                                            <textarea class="form-control" name="adresse" rows="3" placeholder="Enter ...">{{$user->adresse}}</textarea>
+                                        <div class="form-group col-xs-6">
+                                            <label>Grade</label>
+                                            <input type="text" class="form-control" name="grade" value="{{$user->grade}}" >
                                         </div>
-                                        <div class="form-group col-md-6">
+                                         <div class="form-group col-xs-6">
+                                            <label>Etat</label>
+                                            <input type="text" class="form-control" name="etat" value="{{$user->etat}}" >
+                                        </div>
+                                        <!-- textarea -->
+                                        <div class="form-group col-xs-6">
                                             <label>Pays </label>
                                             <select class="form-control" name="nationalite">
                                                 <option value="France" >France </option>
@@ -505,23 +506,14 @@
 <option value="Zimbabwe">Zimbabwe </option>
                                             </select>
                                         </div>
-                                     <div class="form-group col-md-6">
-                                            <label>Classe </label>
-                                            <select class="form-control" name="classe_id" >
-                                                    <?php 
-                                                        $classes=DB::table('classe')
-                                                            ->select('*')
-                                                            ->get();
-                                                    ?>
-                                                     @foreach($classes as $key => $value)
-<option  value="{{$value->classe_id}}" >{{$value->nom_classe}} </option>
-                                                     @endforeach
-                                                
-                                            </select>
-                                    </div>
+
+                                        <div class="form-group col-xs-6">
+                                            <label>Adresse</label>
+                                            <textarea class="form-control" name="adresse" rows="3" placeholder="Enter ...">{{$user->adresse}}</textarea>
+                                        </div>
                                     <div class="box-footer">
                                         <button type="submit" class="btn btn-primary">Modifier</button>
-                                       <a class="btn btn-danger" href="../liststudents"> Annuler</a>
+                                       <a class="btn btn-danger" href="../listenseignant"> Annuler</a>
                                     </div>
                                     </form>
                                 </div><!-- /.box-body -->
@@ -529,7 +521,7 @@
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
-        </div><!-- ./wrapper -->
+        </div><!-- ../wrapper -->
 
 
         <!-- jQuery 2.0.2 -->

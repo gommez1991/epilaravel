@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
         <meta charset="UTF-8">
         <title>Epi Sousse | Espace Etudiant</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- DATA TABLES -->
-        <link href="css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="../css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +53,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
                                         
                                        
@@ -68,10 +68,10 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="./Profile" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="../Profile" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="./logout" class="btn btn-default btn-flat">Déconnexion</a>
+                                        <a href="../logout" class="btn btn-default btn-flat">Déconnexion</a>
                                     </div>
                                 </li>
                             </ul>
@@ -88,7 +88,7 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Ahmed Hadj Ammar</p>
@@ -100,19 +100,19 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="./dashboard">
+                            <a href="../dashboard">
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-users "></i>
                                 <span>Gestion des etudiants</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li ><a href="../addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
+                                <li ><a href="../liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
                          <li class="treeview">
@@ -122,24 +122,24 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./addenseignant"><i class="fa fa-angle-double-right"></i> Ajouter Un Enseignant</a></li>
-                                <li><a href="./listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
+                                <li><a href="../addenseignant"><i class="fa fa-angle-double-right"></i> Ajouter Un Enseignant</a></li>
+                                <li><a href="../listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa  fa-hospital-o"></i>
                                 <span>Gestion de l'ecole</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
-                                <li><a href="./listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
-                                <li><a href="./addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
-                                <li><a href="./listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
+                                <li  ><a href="../adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
+                                <li class="active"><a href="../listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
+                                <li><a href="../addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
+                                <li><a href="../listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
                                 
-                                <li><a href="./addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
-                                <li><a href="./listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
+                                <li><a href="../addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
+                                <li><a href="../listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -149,8 +149,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./addmatiere"><i class="fa fa-angle-double-right"></i>Ajouter une matière</a></li>
-                                <li><a href="./listmatiere"><i class="fa fa-angle-double-right"></i>List des matières</a></li>
+                                <li><a href="../addmatiere"><i class="fa fa-angle-double-right"></i>Ajouter une matière</a></li>
+                                <li><a href="../listmatiere"><i class="fa fa-angle-double-right"></i>List des matières</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -160,13 +160,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
-                                <li><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
+                                <li><a href="../addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
+                                <li ><a href="../listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
                             </ul>
                         </li>
                         
                         <li>
-                            <a href="./gestevents">
+                            <a href="../gestevents">
                                 <i class="fa fa-calendar"></i> <span>Gestion des événements</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
@@ -177,97 +177,46 @@
                 <!-- /.sidebar -->
             </aside>
 
-
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Liste des etudiants
-                        <small></small>
+                        {{$departement->nom_departement}}
+                        
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Liste d'etudiants</li>
+                        <li><a href="#">Gestion Ecole<</a></li>
+                        <li class="active">Voir Departement</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box">
-                                <div class="box-header">
-                                    <h3 class="box-title"></h3>                                    
-                                </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($users as $key => $value)
-                                            <tr>
-                                                <td><p>{{ $value->nom }} {{ $value->prenom }}</p></td>
-                                                <td>{{ $value->numero_inscrit }}</td>
-                                                <td>{{ $value->email }}</td>
-                                                <td>{{ $value->telephone }}</td>
-                                               
-                                                <td><a href="{{ URL::to('viewstudent/' . $value->id) }}"><button type="button" class="btn btn-success btn-flat  fa  fa-eye"></button></a> <a href="{{ URL::to('editstudent/' . $value->id) }}"><button type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a> <a href="{{ URL::to('deletestudent/' . $value->id) }}"><button type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a> </td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div>
-                    </div>
+                 <div class="user-header bg-light-blue" style="
+       padding: 10px;    background: #3c8dbc;    text-align: center;
+">
+                    
+                                    <p style="
+    z-index: 5;    color: #f9f9f9;    color: rgba(255, 255, 255, 0.8);    font-size: 17px;    text-shadow: 2px 2px 3px #333333;    margin-top: 10px;
+">
+                                        {{$departement->nom_departement}}<br>
+                                       
+                                    </p>
+                                </div>
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
-        </div><!-- ./wrapper -->
+        </div><!-- ../wrapper -->
 
 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- DATA TABES SCRIPT -->
-        <script src="js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/AdminLTE/app.js" type="text/javascript"></script>
-
-        <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
-            });
-        </script>
+        <script src="../js/AdminLTE/app.js" type="text/javascript"></script>
 
     </body>
 </html>

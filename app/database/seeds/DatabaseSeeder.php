@@ -25,6 +25,10 @@ class UserTableSeeder extends Seeder {
     public function run()
     {
        DB::table('utilisateur')->delete();
+       DB::table('etudiant')->delete();
+       DB::table('classe')->delete();
+       DB::table('enseignant')->delete();
+      
        DB::table('utilisateur')->insert([
                 'id'   => '1',
                 'pseudo'      => 'admin',
@@ -39,6 +43,7 @@ class UserTableSeeder extends Seeder {
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime()
             ]);
+    
        for ($i=0; $i <100 ; $i++) { 
            # code...
         $sexe= array('male','femelle' );
@@ -73,5 +78,53 @@ class UserTableSeeder extends Seeder {
                 'updated_at' => new DateTime()
             ]);
        }
+       for ($i=1; $i <30 ; $i+=2) { 
+           # code...
+            DB::table('enseignant')->insert([
+                'id'   => "",
+                'user_id'      => "$i",
+                'grade'   => "maître assistant",
+                'etat'=>"active",
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime()
+            ]);
+       }
+
+       //table classe
+       /*
+       $url_emploi=array("emploi1.png","emploi2.png","emploi3.png","emploi4.png","emploi5.png","emploi6.png");
+       $array_spis=array("","G.info","G.indus","G.meca","G.elec");
+       for ($i=1; $i < 6; $i++) { 
+           # code...
+        for ($j=1; $j < 4; $j++) { 
+            # code...
+            $nom_classe="$array_spis[$j]$j";
+            if ($i<3) {
+                # code...
+                $nom_classe="prepa$j";
+            }
+            $k = array_rand($url_emploi);
+            $rand_emploi = $url_emploi[$k];
+            DB::table('classe')->insert([
+                'id'   => "",
+                'nom_classe'      => "$i$nom_classe",
+                'emploi_de_temp_url'   => "img/$rand_emploi",
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime()
+            ]);
+        }
+        */
+       
+       //table departement
+       DB::table('departement')->insert([
+                'id'   => "",
+                'nom_departement'      => "informatique",
+                'responsable_id'   => "1",
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime()
+            ]);
+
+       
+
  }
 }

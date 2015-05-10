@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+     <head>
         <meta charset="UTF-8">
         <title>Epi Sousse | Espace Etudiant</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -104,7 +104,7 @@
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-users "></i>
                                 <span>Gestion des etudiants</span>
@@ -112,7 +112,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li ><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
                          <li class="treeview">
@@ -153,15 +153,15 @@
                                 <li><a href="./listmatiere"><i class="fa fa-angle-double-right"></i>List des matières</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa   fa-file-text-o"></i>
                                 <span>Gestion des Notes</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
-                                <li><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
+                                <li class="active"><a href="./addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
+                                <li ><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
                             </ul>
                         </li>
                         
@@ -177,67 +177,108 @@
                 <!-- /.sidebar -->
             </aside>
 
-
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Liste des etudiants
-                        <small></small>
+                        Ajouter Note
+                        
                     </h1>
-                    <ol class="breadcrumb">
+                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Liste d'etudiants</li>
+                        <li><a href="#">Gestion des notes</a></li>
+                        <li class="active">Liste de Notes</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box">
-                                <div class="box-header">
-                                    <h3 class="box-title"></h3>                                    
-                                </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($users as $key => $value)
-                                            <tr>
-                                                <td><p>{{ $value->nom }} {{ $value->prenom }}</p></td>
-                                                <td>{{ $value->numero_inscrit }}</td>
-                                                <td>{{ $value->email }}</td>
-                                                <td>{{ $value->telephone }}</td>
+                    <div class="box box-danger">
+                                    
+                                    <div class="box-body">
+                                        <form action="" method="post">
+                                            <!-- text input -->
+                                            <div class="form-group col-xs-6">
+                                                <label>Departement</label>
+                                                <select class="form-control" id="departement_id" name="departement_id">
+                                                    <option value="">Select Departement</option>
+                                                    <?php 
+                                                        $classe=DB::table('departement')
+                                                            ->select('*')
+                                                            ->get();
+                                                            
+                                                    ?>
+                                                     @foreach($classe as $key => $value)
+                                                            <option  value="{{$value->id}}" >{{$value->nom_departement}} </option>
+                                                     @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-xs-6">
+                                                <label>Filières</label>
+                                                <select class="form-control" id="id_filieres" name="id_filieres">
+                                                    
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-xs-6">
+                                                <label>Classe</label>
+                                                <select class="form-control" id="id_classes" name="id_classes">
+                                                    
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-xs-6">
+                                                <label>Matière</label>
+                                                <select class="form-control" id="id_matiere" name="id_matiere">
+                                                    
+
+                                                </select>
+                                            </div>
+                                             
+                                        <h3 class="box-title">Liste de Notes</h3>
+                                        <div class="box-body table-responsive" >
+                                        
+                                            <table class="table table-bordered">
+                                                
+                                                    <tr>
+                                                        <th>Nom & Prenom </th>
+                                                        <th>Note TP</th>
+                                                        <th>Note DS</th>
+                                                        <th>Note Examen</th>
+                                                    </tr>
+                                                
+                                                <tbody id="data_table_notes" >
+                                                
+                                                </tbody>
                                                
-                                                <td><a href="{{ URL::to('viewstudent/' . $value->id) }}"><button type="button" class="btn btn-success btn-flat  fa  fa-eye"></button></a> <a href="{{ URL::to('editstudent/' . $value->id) }}"><button type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a> <a href="{{ URL::to('deletestudent/' . $value->id) }}"><button type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a> </td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div>
-                    </div>
+                                                    <tr>
+                                                        <th>Nom & Prenom </th>
+                                                        <th>Note TP</th>
+                                                        <th>Note DS</th>
+                                                        <th>Note Examen</th>
+                                                    </tr>
+                                               
+                                            </table>
+                                             <div class="box-footer">
+                                        <button type="submit"  id="btn_add" class="btn btn-primary">Ajouter</button>
+                                       <a class="btn btn-danger" href="liststudents"> Annuler</a>
+                                    </div>
+                                            </form>
+                                           
+
+                                        </div><!-- /.box-body -->
+
+ 
+
+                                    </div>
+
+                                    <div class="box-footer">
+                                          <p style="color='#FFF'">.</p>  
+                                    </div>
+
+                                </div>
+
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
@@ -257,6 +298,7 @@
         <!-- page script -->
         <script type="text/javascript">
             $(function() {
+                $('#btn_add').disabled = false;
                 $("#example1").dataTable();
                 $('#example2').dataTable({
                     "bPaginate": true,
@@ -267,6 +309,102 @@
                     "bAutoWidth": false
                 });
             });
+        </script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function($) {
+
+                  var list_target_id = 'id_filieres'; //first select list ID
+                  var list_select_id = 'departement_id'; //second select list ID
+                  var initial_target_html = '<option value="">Select filieres</option>'; //Initial prompt for target select
+                 
+                  $('#'+list_target_id).html(initial_target_html); //Give the target select the prompt option
+                 
+                  $('#'+list_select_id).change(function(e) {
+                    //Grab the chosen value on first select list change
+                    var selectvalue = $(this).val();
+                    //Display 'loading' status in the target select list
+                    $('#'+list_target_id).html('<option value="">Loading...</option>');
+                 
+                    if (selectvalue == "") {
+                        //Display initial prompt in target select if blank value selected
+                       $('#'+list_target_id).html(initial_target_html);
+                    } else {
+                      //Make AJAX request, using the selected value as the GET
+                      $.ajax({url: '/epilaravel/public/showfiliere/'+selectvalue,
+                             success: function(output) {
+                                //alert(output);
+                                $('#'+list_target_id).html(output);
+                            },
+                          error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " "+ thrownError);
+                          }});
+                        }
+                    });
+
+
+
+                //load clases
+                $('#id_classes').html("<option value=''>Select Classe</option>"); //Give the target select the prompt option
+                 
+                  $('#id_filieres').change(function(e) {
+                    //Grab the chosen value on first select list change
+                    var selectvalue = $(this).val();
+                    //Display 'loading' status in the target select list
+                    $('#id_classes').html('<option value="">Loading...</option>');
+                    $('#id_matiere').html('<option value="">Loading...</option>');
+                    
+                    if (selectvalue == "") {
+                        //Display initial prompt in target select if blank value selected
+                       $('#id_classes').html("<option value=''>Select Classe</option>");
+                       $('#id_matiere').html("<option value=''>Select matiere</option>");
+                    } else {
+                      //Make AJAX request, using the selected value as the GET
+                      $.ajax({url: '/epilaravel/public/showclasse/'+selectvalue,
+                             success: function(output) {
+                                //alert(output);
+                                $('#id_classes').html(output);
+                            },
+                          error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " "+ thrownError);
+                          }});
+                        }
+
+                        $.ajax({url: '/epilaravel/public/showmatieres/'+selectvalue,
+                             success: function(output) {
+                                //alert(output);
+                                $('#id_matiere').html(output);
+                            },
+                          error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " "+ thrownError);
+                          }});
+                        
+                    });
+//charger le tablaux
+                    $('#id_matiere').change(function(e) {
+                    $('#btn_add').disabled = true;
+                         var id_mat = $(this).val();
+                         //alert(id_mat);
+                         var id_clas = $('#id_classes').val();
+                         var id_fil = $('#id_filieres').val();
+                        if (id_mat == ""&& id_clas == ""&& id_fil == "") {
+                        //Display initial prompt in target select if blank value selected
+                      
+                        } else {
+
+                         $.ajax({url: '/epilaravel/public/getlistformnote/'+id_clas,
+                             success: function(output) {
+    
+                                //alert(output);
+                                $('#data_table_notes').html(output);
+                                
+                            },
+                          error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status + " "+ thrownError);
+                          }});
+                    }});
+                });
         </script>
 
     </body>

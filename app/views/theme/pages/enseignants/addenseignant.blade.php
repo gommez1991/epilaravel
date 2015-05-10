@@ -5,14 +5,16 @@
         <title>Epi Sousse | Espace Etudiant</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
-        <link href="../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-        
+        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -22,7 +24,7 @@
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
-       <header class="header">
+        <header class="header">
             <a href="index.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Epi Sousse
@@ -66,10 +68,10 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="../Profile" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="./Profile" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="../logout" class="btn btn-default btn-flat">Déconnexion</a>
+                                        <a href="./logout" class="btn btn-default btn-flat">Déconnexion</a>
                                     </div>
                                 </li>
                             </ul>
@@ -86,7 +88,7 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
+                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
                             <p>Ahmed Hadj Ammar</p>
@@ -98,30 +100,30 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="../dashboard">
+                            <a href="./dashboard">
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview ">
                             <a href="#">
                                 <i class="fa fa-users "></i>
                                 <span>Gestion des etudiants</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li ><a href="../addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="../liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
+                                <li ><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
-                         <li class="treeview">
+                         <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-suitcase"></i>
                                 <span>Gestion d'enseignants</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../addenseignant"><i class="fa fa-angle-double-right"></i> Ajouter Un Enseignant</a></li>
-                                <li><a href="../listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
+                                <li><a href="./addenseignant"><i class="fa fa-angle-double-right"></i> Ajouter Un Enseignant</a></li>
+                                <li class="active"><a href="./listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -131,13 +133,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
-                                <li><a href="../listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
-                                <li><a href="../addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
-                                <li><a href="../listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
+                                <li><a href="./adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
+                                <li><a href="./listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
+                                <li><a href="./addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
+                                <li><a href="./listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
                                 
-                                <li><a href="../addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
-                                <li><a href="../listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
+                                <li><a href="./addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
+                                <li><a href="./listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -147,8 +149,8 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../addmatiere"><i class="fa fa-angle-double-right"></i>Ajouter une matière</a></li>
-                                <li><a href="../listmatiere"><i class="fa fa-angle-double-right"></i>List des matières</a></li>
+                                <li><a href="./addmatiere"><i class="fa fa-angle-double-right"></i>Ajouter une matière</a></li>
+                                <li><a href="./listmatiere"><i class="fa fa-angle-double-right"></i>List des matières</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -158,13 +160,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
-                                <li><a href="../listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
+                                <li><a href="./addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
+                                <li><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
                             </ul>
                         </li>
                         
                         <li>
-                            <a href="../gestevents">
+                            <a href="pages/calendar.html">
                                 <i class="fa fa-calendar"></i> <span>Gestion des événements</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
@@ -174,86 +176,71 @@
                 </section>
                 <!-- /.sidebar -->
             </aside>
+
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Modification d'etudiant {{$user->nom}}  {{$user->prenom}}
-                        
+                        Ajouter un nouveau enseignant
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Modification etudiant</li>
+                        <li><a href="#">Gestion des enseignants</a></li>
+                        <li class="active">Ajoute enseignant </li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-                 <div class="user-header bg-light-blue" style="
-    height: 175px;    padding: 10px;    background: #3c8dbc;    text-align: center;
-">
-                     <img src="../{{$user->url_avatar}}" class="img-circle" alt="User Image" style="
-    z-index: 5;    height: 90px;    width: 90px;    border: 8px solid;    border-color: transparent;    border-color: rgba(255, 255, 255, 0.2);
-">
-                                    <p style="
-    z-index: 5;    color: #f9f9f9;    color: rgba(255, 255, 255, 0.8);    font-size: 17px;    text-shadow: 2px 2px 3px #333333;    margin-top: 10px;
-">
-                                        {{$user->nom}}  {{$user->prenom}}<br>
-                                        <small>Etudiant</small>
-                                    </p>
-                                </div>
+                 
                                 <div class="box box-danger">
                                 <div class="box-header">
                                     <h3 class="box-title">Informations Generals</h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
                                     <form action="" method="post">
-                                        <div class="form-group col-md-6">
-                                            <label>Numero D'inscription</label>
-                                            <input type="text" class="form-control" placeholder="Numero D'inscription" name="numero_inscrit" value="{{$user->numero_inscrit}}"  required>
-                                        </div>
                                         <!-- text input -->
-                                        <div class="form-group col-md-6">
+                                        
+                                        <div class="form-group col-xs-6">
                                             <label>Pseudo</label>
-                                            <input type="text" class="form-control" name="pseudo" value="{{$user->pseudo}}" >
+                                            <input type="text" class="form-control" placeholder="Pseudo" name="pseudo" value=""  required>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Nouveau mot de passe</label>
-                                            <input type="password" class="form-control"  placeholder="Mot de passe">
+                                            <input type="password" name="password" class="form-control"  placeholder="Mot de passe" required>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Confirmation de mot de passe</label>
-                                            <input type="password" class="form-control"  placeholder="Mot de passe">
+                                            <input type="password" class="form-control"  placeholder="Mot de passe" required>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Nom</label>
-                                            <input type="text" name="nom" class="form-control"  value="{{$user->nom}}">
+                                            <input type="text" name="nom" class="form-control" placeholder="Nom"  value="" required>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Prenom</label>
-                                            <input type="text" name="prenom" class="form-control"  value="{{$user->nom}}">
+                                            <input type="text" name="prenom" placeholder="Prenom" class="form-control"  value="" required>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Email</label>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">@</span>
-                                                    <input type="email" name="email" class="form-control"  value="{{$user->email}}">
+                                                    <input type="email" name="email" placeholder="Email" class="form-control"  value="" required>
                                                 </div>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                             <label>Telephone</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-phone"></i>
                                                 </div>
-                                                <input type="text" name="telephone" value="{{$user->telephone}}" class="form-control"/>
+                                                <input type="text" name="telephone" value="" placeholder="Numéro de téléphone" class="form-control"required/>
                                              </div><!-- /.input group -->
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-xs-6">
                                         <label>Sexe</label> 
-                                            <div class="radio">
+                                            <div class="radio" >
                                                 <label>
                                                     <input type="radio" name="sexe" id="sexe" value="sexe" checked>
                                                     ♀ Homme 
@@ -266,14 +253,19 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <!-- textarea -->
-                                        <div class="form-group col-md-6">
-                                            <label>Adresse</label>
-                                            <textarea class="form-control" name="adresse" rows="3" placeholder="Enter ...">{{$user->adresse}}</textarea>
+                                        <div class="form-group col-xs-6">
+                                            <label>Grade</label>
+                                            <input type="text" class="form-control" name="grade"  >
                                         </div>
-                                        <div class="form-group col-md-6">
+                                         <div class="form-group col-xs-6">
+                                            <label>Etat</label>
+                                            <input type="text" class="form-control" name="etat"  >
+                                        </div>
+                                        <!-- textarea -->
+                                       
+                                        <div class="form-group col-xs-6">
                                             <label>Pays </label>
-                                            <select class="form-control" name="nationalite">
+                                            <select class="form-control" name="nationalite" >
                                                 <option value="France" >France </option>
 <option value="Afghanistan">Afghanistan </option>
 <option value="Afrique_Centrale">Afrique_Centrale </option>
@@ -505,23 +497,13 @@
 <option value="Zimbabwe">Zimbabwe </option>
                                             </select>
                                         </div>
-                                     <div class="form-group col-md-6">
-                                            <label>Classe </label>
-                                            <select class="form-control" name="classe_id" >
-                                                    <?php 
-                                                        $classes=DB::table('classe')
-                                                            ->select('*')
-                                                            ->get();
-                                                    ?>
-                                                     @foreach($classes as $key => $value)
-<option  value="{{$value->classe_id}}" >{{$value->nom_classe}} </option>
-                                                     @endforeach
-                                                
-                                            </select>
-                                    </div>
+                                         <div class="form-group col-xs-6">
+                                            <label>Adresse</label>
+                                            <textarea class="form-control" name="adresse" rows="3" placeholder="Adresse" required></textarea>
+                                        </div>
                                     <div class="box-footer">
-                                        <button type="submit" class="btn btn-primary">Modifier</button>
-                                       <a class="btn btn-danger" href="../liststudents"> Annuler</a>
+                                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                                       <a class="btn btn-danger" href="liststudents"> Annuler</a>
                                     </div>
                                     </form>
                                 </div><!-- /.box-body -->
@@ -535,9 +517,9 @@
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="../js/AdminLTE/app.js" type="text/javascript"></script>
+        <script src="js/AdminLTE/app.js" type="text/javascript"></script>
 
     </body>
 </html>

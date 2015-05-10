@@ -9287,7 +9287,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Afficher de  _START_ à _END_ parmi _TOTAL_ ",
 		
 		
 			/**
@@ -9481,7 +9481,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Recherche:",
 		
 		
 			/**
@@ -11441,10 +11441,10 @@
 		"sPageButton": "paginate_button",
 		"sPageButtonActive": "paginate_active",
 		"sPageButtonStaticDisabled": "paginate_button paginate_button_disabled",
-		"sPageFirst": "first",
-		"sPagePrevious": "previous",
-		"sPageNext": "next",
-		"sPageLast": "last",
+		"sPageFirst": "première",
+		"sPagePrevious": "précédent",
+		"sPageNext": "suivant",
+		"sPageLast": "dernier",
 		
 		/* Striping classes */
 		"sStripeOdd": "odd",

@@ -104,7 +104,7 @@
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-users "></i>
                                 <span>Gestion des etudiants</span>
@@ -112,7 +112,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li ><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
                          <li class="treeview">
@@ -126,17 +126,17 @@
                                 <li><a href="./listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa  fa-hospital-o"></i>
                                 <span>Gestion de l'ecole</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
-                                <li><a href="./listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
+                                <li  ><a href="./adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
+                                <li ><a href="./listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
                                 <li><a href="./addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
-                                <li><a href="./listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
+                                <li class="active"><a href="./listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
                                 
                                 <li><a href="./addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
                                 <li><a href="./listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
@@ -161,7 +161,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="./addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
-                                <li><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
+                                <li ><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
                             </ul>
                         </li>
                         
@@ -176,20 +176,18 @@
                 </section>
                 <!-- /.sidebar -->
             </aside>
-
-
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Liste des etudiants
-                        <small></small>
+                        Liste d'filiéres
+                        
                     </h1>
-                    <ol class="breadcrumb">
+                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Liste d'etudiants</li>
+                        <li><a href="#">Gestion des filiéres</a></li>
+                        <li class="active">Liste d'filiéres</li>
                     </ol>
                 </section>
 
@@ -199,37 +197,33 @@
                         <div class="col-xs-12">
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title"></h3>                                    
+                                                                      
                                 </div><!-- /.box-header -->
                                 <div class="box-body table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
+                                                <th>N° </th>
+                                                <th>Nom de  filiéres</th>
+                                                <th>Departement</th>
                                                 <th>Gestion</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($users as $key => $value)
+                                        @foreach($filieres as $key => $value)
                                             <tr>
-                                                <td><p>{{ $value->nom }} {{ $value->prenom }}</p></td>
-                                                <td>{{ $value->numero_inscrit }}</td>
-                                                <td>{{ $value->email }}</td>
-                                                <td>{{ $value->telephone }}</td>
-                                               
-                                                <td><a href="{{ URL::to('viewstudent/' . $value->id) }}"><button type="button" class="btn btn-success btn-flat  fa  fa-eye"></button></a> <a href="{{ URL::to('editstudent/' . $value->id) }}"><button type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a> <a href="{{ URL::to('deletestudent/' . $value->id) }}"><button type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a> </td>
+                                                <td>{{ $value->id }}</td>
+                                                <td><p>{{ $value->nom_filiere }}</p></td>
+                                                <td>{{ $value->nom_departement }}</td>
+                                                <td> <a  href="{{ URL::to('editfiliere/' . $value->id) }}"><button title="Modifier" type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a> <a href="{{ URL::to('deletefiliere/' . $value->id) }}"><button title="Supprimer" type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a> </td>
                                             </tr>
                                         @endforeach
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
+                                                <th>N° </th>
+                                                <th>Nom de  filiéres</th>
+                                                <th>Departement</th>
                                                 <th>Gestion</th>
                                             </tr>
                                         </tfoot>

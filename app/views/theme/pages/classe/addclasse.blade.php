@@ -104,7 +104,7 @@
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-users "></i>
                                 <span>Gestion des etudiants</span>
@@ -112,7 +112,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li ><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
                          <li class="treeview">
@@ -126,19 +126,19 @@
                                 <li><a href="./listenseignant"><i class="fa fa-angle-double-right"></i> List Des Enseignants</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa  fa-hospital-o"></i>
                                 <span>Gestion de l'ecole</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="./adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
+                                <li ><a href="./adddepartment"><i class="fa fa-angle-double-right"></i>Ajouter Un departement</a></li>
                                 <li><a href="./listdepartment"><i class="fa fa-angle-double-right"></i>List Des departements</a></li>
                                 <li><a href="./addfiliere"><i class="fa fa-angle-double-right"></i>Ajouter Un filiére</a></li>
                                 <li><a href="./listfiliere"><i class="fa fa-angle-double-right"></i>List Des filiéres</a></li>
                                 
-                                <li><a href="./addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
+                                <li class="active" ><a href="./addclasse"><i class="fa fa-angle-double-right"></i>Ajouter Un classe</a></li>
                                 <li><a href="./listclasse"><i class="fa fa-angle-double-right"></i>List Des classes</a></li>
                             </ul>
                         </li>
@@ -161,7 +161,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="./addnote"><i class="fa fa-angle-double-right"></i>Ajouter une note</a></li>
-                                <li><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
+                                <li ><a href="./listnote"><i class="fa fa-angle-double-right"></i>List des notes</a></li>
                             </ul>
                         </li>
                         
@@ -177,97 +177,74 @@
                 <!-- /.sidebar -->
             </aside>
 
-
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Liste des etudiants
-                        <small></small>
+                        Nouveau Classe
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Liste d'etudiants</li>
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Tableau de bord</a></li>
+                        <li><a href="#">Gestion de l'ecole</a></li>
+                        <li class="active">Ajout d'un classe</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box">
-                                <div class="box-header">
-                                    <h3 class="box-title"></h3>                                    
-                                </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($users as $key => $value)
-                                            <tr>
-                                                <td><p>{{ $value->nom }} {{ $value->prenom }}</p></td>
-                                                <td>{{ $value->numero_inscrit }}</td>
-                                                <td>{{ $value->email }}</td>
-                                                <td>{{ $value->telephone }}</td>
-                                               
-                                                <td><a href="{{ URL::to('viewstudent/' . $value->id) }}"><button type="button" class="btn btn-success btn-flat  fa  fa-eye"></button></a> <a href="{{ URL::to('editstudent/' . $value->id) }}"><button type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a> <a href="{{ URL::to('deletestudent/' . $value->id) }}"><button type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a> </td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div>
-                    </div>
+                 
+                                <div class="box box-danger">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Informations Generals</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <form action="" method="post">
+                                            <!-- text input -->
+                                            <div class="form-group col-xs-6">
+                                                <label>Nom</label>
+                                                <input type="text" class="form-control" name="nom_classe" value="" >
+                                            </div>
+                                            <div class="form-group col-xs-6">
+                                                <label>Emploi de temp</label>
+                                                <input type="text" class="form-control" name="emploi_de_temp_url" value="" >
+                                            </div>
+                                            <!-- textarea -->
+                                            <div class="form-group col-xs-12">
+                                                <label>Filirer</label>
+                                                <select class="form-control" name="filiere_id">
+                                                    <?php 
+                                                        $enseignant=DB::table('filieres')
+                                                            ->join('departement','filieres.department_id', '=', 'departement.id')
+                                                            ->select('*')
+                                                            ->get();
+                                                            
+                                                    ?>
+                                                     @foreach($enseignant as $key => $value)
+                                                            <option  value="{{$value->id}}" >{{$value->nom_filiere}} {{$value->nom_departement}} </option>
+                                                     @endforeach
+
+                                                 </select>
+                                            </div>
+                                            <div class="box-footer">
+                                            <button type="submit" class="btn btn-primary">Ajouter</button>
+                                           <a class="btn btn-danger" href="./listclasse"> Annuler</a>
+                                    </div>
+                                        </form>
+                                    </div><!-- /.box-body -->
+                                    
+                                </div>
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
-
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- DATA TABES SCRIPT -->
-        <script src="js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        <script src="./js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="js/AdminLTE/app.js" type="text/javascript"></script>
-
-        <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
-            });
-        </script>
+        <script src="./js/AdminLTE/app.js" type="text/javascript"></script>
 
     </body>
 </html>

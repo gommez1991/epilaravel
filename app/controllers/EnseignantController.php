@@ -1,35 +1,37 @@
 <?php
 
-class StudentController extends \BaseController {
+class EnseignantController extends \BaseController {
 
-	
-    public function view($id)
-	{
-		$etudiant=DB::table('utilisateur')
-            ->join('etudiant', 'utilisateur.id', '=', 'etudiant.user_id')
-             ->where('utilisateur.id',  $id)
-            ->first();
-		
-		//var_dump($user);
-		return View::make('theme.pages.etudiants.viewstudent')->with('etudiant', $etudiant);
-	}
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
+
+	public function __construct()
+    {
+        //$this->beforeFilter('auth');
+    }
+    public function view($id)
+	{
+		$user=DB::table('utilisateur')
+            ->join('enseignant', 'utilisateur.id', '=', 'enseignant.user_id')
+             ->where('utilisateur.id',  $id)
+            ->first();
+		
+		//var_dump($user);
+		return View::make('theme.pages.enseignants.viewenseignant')->with('user', $user);
+	}
+
 	public function index()
 	{
-		//
-		//$students = Students::all();
-		//$users=User::all();
-
+	
 		$users=DB::table('utilisateur')
-            ->join('etudiant', 'utilisateur.id', '=', 'etudiant.user_id')
+            ->join('enseignant', 'utilisateur.id', '=', 'enseignant.user_id')
             ->select('*')
         ->get();
  
-        return View::make('theme.pages.etudiants.liste_etudiants', ['users'=>$users]);
+        return View::make('theme.pages.enseignants.liste_enseignants', ['users'=>$users]);
 	}
 
 
@@ -40,7 +42,7 @@ class StudentController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('theme.pages.etudiants.addstudent');
+		return View::make('theme.pages.enseignants.addenseignant');
 	}
 
 
@@ -67,15 +69,13 @@ class StudentController extends \BaseController {
         $tmp=array_values($var);
 		$term_id=$tmp[0]->id;
 		//var_dump($term_id);
-        DB::table('etudiant')->insert(array('numero_inscrit' => Input::get('numero_inscrit'), 'user_id' => $term_id,'annee_universitaire'=>'2015/2016','created_at' => new DateTime(),'updated_at' => new DateTime()));
-        DB::table('inscrit')->insert(array('classse_id' => Input::get('classe_id'), 'user_id' => $term_id,'created_at' => new DateTime(),'updated_at' => new DateTime()));
-        
+        DB::table('enseignant')->insert(array('grade' => Input::get('grade'), 'user_id' => $term_id,'etat'=> Input::get('etat'),'created_at' => new DateTime(),'updated_at' => new DateTime()));
         $users=DB::table('utilisateur')
-            ->join('etudiant', 'utilisateur.id', '=', 'etudiant.user_id')
+            ->join('enseignant', 'utilisateur.id', '=', 'enseignant.user_id')
             ->select('*')
         ->get();
-        return View::make('theme.pages.etudiants.liste_etudiants', ['users'=>$users]);
-	}
+        return View::make('theme.pages.enseignants.liste_enseignants', ['users'=>$users]);	
+    }
 
 
 	/**
@@ -86,13 +86,11 @@ class StudentController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//$user = User::find($id);
- 
-        $user=DB::table('utilisateur')
-            ->join('etudiant', 'utilisateur.id', '=', 'etudiant.user_id')
+		 $user=DB::table('utilisateur')
+            ->join('enseignant', 'utilisateur.id', '=', 'enseignant.user_id')
              ->where('utilisateur.id',  $id)
             ->first();
-        return View::make('theme.pages.etudiants.editstudent', [ 'user' => $user ]);
+        return View::make('theme.pages.enseignants.editenseignant', [ 'user' => $user ]);
 	}
 
 
@@ -105,9 +103,9 @@ class StudentController extends \BaseController {
 	public function update($id)
 	{
 		$user = User::find($id);
-		DB::table('etudiant')
+		DB::table('enseignant')
             ->where('user_id', '=', $id)
-            ->update(array('numero_inscrit' => Input::get("numero_inscrit"),));
+            ->update(array('grade' => Input::get("grade"),'etat' => Input::get("etat")));
         $user->pseudo 		= Input::get('pseudo');
         $user->password  	= Hash::make(Input::get('password'));
         $user->nom   		= Input::get('nom');
@@ -118,13 +116,8 @@ class StudentController extends \BaseController {
         $user->adresse      = Input::get('adresse');
         $user->nationalite  = Input::get('nationalite');
         $user->save();
-
-        $row=DB::table('inscrit')
-            ->where('inscrit.user_id', '=', $id)
-            ->update(array('classe_id' => Input::get("classe_id"),'user_id' => $id,'annee_universitaire' => "2015/2016"));
- 		
  
-        return Redirect::to('/editstudent/'.$id);
+        return Redirect::to('/editenseignant/'.$id);
 	}
 
 
@@ -136,9 +129,9 @@ class StudentController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		Students::where('user_id', '=', $id)->delete();
+		Enseignant::where('user_id', '=', $id)->delete();
 		User::destroy($id);
-        return Redirect::to('/liststudents');
+        return Redirect::to('/listenseignant');
 	}
 
 

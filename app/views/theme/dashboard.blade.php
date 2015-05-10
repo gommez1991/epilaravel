@@ -10,8 +10,16 @@
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- DATA TABLES -->
-        <link href="css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <!-- Morris chart -->
+        <link href="css/morris/morris.css" rel="stylesheet" type="text/css" />
+        <!-- jvectormap -->
+        <link href="css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <!-- fullCalendar -->
+        <link href="css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+        <!-- Daterange picker -->
+        <link href="css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+        <!-- bootstrap wysihtml5 - text editor -->
+        <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
@@ -24,7 +32,7 @@
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
-       <header class="header">
+        <header class="header">
             <a href="index.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 Epi Sousse
@@ -99,20 +107,20 @@
                     
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li>
+                        <li class="active">
                             <a href="./dashboard">
                                 <i class="fa fa-dashboard"></i> <span>Tableau De Bord</span>
                             </a>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-users "></i>
-                                <span>Gestion des etudiants</span>
+                                <i class="fa fa-users"></i>
+                                <span>Gestion d'etudiants</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li ><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
-                                <li class="active"><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
+                                <li><a href="./addstudent"><i class="fa fa-angle-double-right"></i> Ajouter Un Etudiant</a></li>
+                                <li><a href="./liststudents"><i class="fa fa-angle-double-right"></i> List Des Etudinats</a></li>
                             </ul>
                         </li>
                          <li class="treeview">
@@ -177,97 +185,202 @@
                 <!-- /.sidebar -->
             </aside>
 
-
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">                
+            <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Liste des etudiants
-                        <small></small>
+                        Tableau De Bord
+                        
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Accuille</a></li>
-                        <li><a href="#">Gestion des etudinats</a></li>
-                        <li class="active">Liste d'etudiants</li>
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Tableau De Bord</a></li>
+                        
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
+
+                    <!-- Small boxes (Stat box) -->
                     <div class="row">
-                        <div class="col-xs-12">
-                            <div class="box">
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                <?php 
+                                      $users_number=DB::table('utilisateur')
+            ->join('etudiant', 'utilisateur.id', '=', 'etudiant.user_id')
+            ->count();
+            
+            echo "<h3>$users_number</h3>";
+                                ?>
+                                    
+                                    <p>
+                                        Etudiants
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <a href="./liststudents" class="small-box-footer">
+                                    List Des Etudinats <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                <?php  
+                                    $enseignant_number=DB::table('utilisateur')
+                                        ->join('enseignant', 'utilisateur.id', '=', 'enseignant.user_id')
+                                        ->count();
+                                    echo "<h3>$enseignant_number</h3>";
+                                ?>
+                                    <p>
+                                        Enseignants
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+                                <a href="./listenseignant" class="small-box-footer">
+                                    List Des Enseignants <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-yellow">
+                                <div class="inner">
+                                    <h3>
+                                        44
+                                    </h3>
+                                    <p>
+                                        User Registrations
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-person-add"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-red">
+                                <div class="inner">
+                                    <h3>
+                                        65
+                                    </h3>
+                                    <p>
+                                        Unique Visitors
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+
+                    <!-- top row -->
+                    <div class="row">
+                        <div class="col-xs-12 connectedSortable">
+                            
+                        </div><!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- Main row -->
+                    <div class="row">
+                        <!-- Left col -->
+                        <section class="col-lg-6 connectedSortable"> 
+                               
+                            
+                    
+                            <!-- Calendar -->
+                            <div class="box box-warning">
                                 <div class="box-header">
-                                    <h3 class="box-title"></h3>                                    
+                                    <i class="fa fa-calendar"></i>
+                                    <div class="box-title">Calendar</div>
+                                    
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <!-- button with a dropdown -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+                                            <ul class="dropdown-menu pull-right" role="menu">
+                                                <li><a href="#">Add new event</a></li>
+                                                <li><a href="#">Clear events</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">View calendar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- /. tools -->                                    
                                 </div><!-- /.box-header -->
-                                <div class="box-body table-responsive">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($users as $key => $value)
-                                            <tr>
-                                                <td><p>{{ $value->nom }} {{ $value->prenom }}</p></td>
-                                                <td>{{ $value->numero_inscrit }}</td>
-                                                <td>{{ $value->email }}</td>
-                                                <td>{{ $value->telephone }}</td>
-                                               
-                                                <td><a href="{{ URL::to('viewstudent/' . $value->id) }}"><button type="button" class="btn btn-success btn-flat  fa  fa-eye"></button></a> <a href="{{ URL::to('editstudent/' . $value->id) }}"><button type="button" class="btn btn-info btn-flat  fa fa-edit"></button></a> <a href="{{ URL::to('deletestudent/' . $value->id) }}"><button type="button" class="btn btn-danger btn-flat  fa fa-trash-o"></button></a> </td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nom & Prenom</th>
-                                                <th>N° D'inscription</th>
-                                                <th>Email</th>
-                                                <th>Telephone</th>
-                                                <th>Gestion</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
+                                <div class="box-body no-padding">
+                                    <!--The calendar -->
+                                    <div id="calendar"></div>
                                 </div><!-- /.box-body -->
                             </div><!-- /.box -->
-                        </div>
-                    </div>
+
+                            
+
+                        </section><!-- /.Left col -->
+                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                        <section class="col-lg-6 connectedSortable">
+                            
+                            
+                                
+                            
+
+                        </section><!-- right col -->
+                    </div><!-- /.row (main row) -->
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
+        <!-- add new calendar event modal -->
+
 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- jQuery UI 1.10.3 -->
+        <script src="js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
         <!-- Bootstrap -->
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- DATA TABES SCRIPT -->
-        <script src="js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+        <!-- Morris.js charts -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="js/plugins/morris/morris.min.js" type="text/javascript"></script>
+        <!-- Sparkline -->
+        <script src="js/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+        <!-- jvectormap -->
+        <script src="js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
+        <script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+        <!-- fullCalendar -->
+        <script src="js/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="js/plugins/jqueryKnob/jquery.knob.js" type="text/javascript"></script>
+        <!-- daterangepicker -->
+        <script src="js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+
         <!-- AdminLTE App -->
         <script src="js/AdminLTE/app.js" type="text/javascript"></script>
-
-        <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#example2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": false,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": true,
-                    "bAutoWidth": false
-                });
-            });
-        </script>
+        
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="js/AdminLTE/dashboard.js" type="text/javascript"></script>        
 
     </body>
 </html>
